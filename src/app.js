@@ -2,6 +2,7 @@ const cors=require("cors");
 const rateLimit=require('express-rate-limit');
 const express=require("express");
 const logger=require("./middleware/logger");
+const cookieParser=require("cookie-parser");
 
 const authRoutes=require("./routes/authRoutes");
 const errorHandler=require("./middleware/error");
@@ -14,7 +15,7 @@ const limiter=rateLimit({
     message:"Too many requests, please try again later"
 });
 app.use(limiter);
-
+app.use(cookieParser());
 app.use(express.json());
 app.use(logger);
 app.use("/api/auth",authRoutes);
