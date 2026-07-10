@@ -29,11 +29,13 @@ I am continuing a previous session with my backend development tutor. Please rea
 - **Auth Middleware:** Built the bouncer in `src/middleware/auth.js` to protect private routes using JWT verification.
 - **Error Handling:** Built a global error handler in `src/middleware/error.js`.
 - **Security:** Added CORS and Rate Limiting to `app.js`.
+- **Input Validation:** Configured Joi schemas and dynamic validation middleware.
+- **Refresh Tokens:** Separated access (JSON) and refresh (HTTP-only cookie) tokens, built `/refresh` and `/logout` endpoints.
 
 ## 3. Exactly Where We Left Off (Current Task)
-We have officially **COMPLETED** the core backend boilerplate architecture! 
+We have officially **COMPLETED** the core backend boilerplate architecture, including advanced authentication features! 
 
-The next step is for the student to decide what kind of application they want to build on top of this robust foundation (e.g., an E-commerce API, a Blog API, a Task Manager, etc.).
+The next step is for the student to decide what kind of application they want to build on top of this robust foundation (e.g., an E-commerce API, a Blog API, a Task Manager, etc.) to practice Pagination, Filtering, and File Uploads.
 
 ---
 **AI TUTOR:** Please acknowledge this state and ask me what I want to build next using my brand new boilerplate!

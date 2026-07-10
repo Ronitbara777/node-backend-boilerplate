@@ -19,14 +19,13 @@ const userSchema=new mongoose.Schema({
   timestamps:true,
 });
 
-userSchema.pre('save',async function(next){
+userSchema.pre('save',async function(){
   if(!this.isModified('password')){
-    return next();
+    return;
   }
   const salt=await bcryptjs.genSalt(10);
   const hashedPassword=await bcryptjs.hash(this.password,salt);
   this.password=hashedPassword
-  next();
 })
 
 userSchema.methods.matchPassword=async function(enteredPassword){
